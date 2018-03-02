@@ -1,0 +1,22 @@
+#include <iostream>
+#define MAX 8 //define array size
+using namespace std;
+
+void recPrint(int[], int);
+
+int main(){
+  int arr[MAX] = {11,2,6,27,19,54,32,15}; //array holds 8 integers
+  
+  recPrint(arr,0); 
+  
+  return 0;
+}
+
+void recPrint(int arr [], int index)
+{
+  if (index != MAX -1)
+  {
+    recPrint(arr,index+1);
+  }
+  cout << arr[index] << " ";
+}
